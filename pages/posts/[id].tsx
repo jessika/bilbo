@@ -10,9 +10,10 @@ export default function Post({
   postData
 }: {
   postData: {
-    title: string
-    date: string
-    contentHtml: string
+    contentHtml: string,
+    title: string,
+    updated_date: string,
+    visited_date: string,
   }
 }) {
   return (
@@ -23,7 +24,9 @@ export default function Post({
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+          <Date dateString={postData.updated_date} />
+          &nbsp;|
+          Visited <Date dateString={postData.visited_date} formatString={'LLLL yyyy'} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
