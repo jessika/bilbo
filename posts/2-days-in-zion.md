@@ -1,0 +1,78 @@
+---
+title: 'How I spent 2 days in Zion National Park'
+date: '2023-05-11'
+visited_date: '2023-05-02'
+---
+
+![View from Angels Landing](/images/2-days-in-zion/zion_angels_landing_canyon_end-optimized.jpg)
+*View from Angels Landing*
+
+Here's how I spent 2 days in Zion National Park.
+
+## Day 1 Itinerary
+
+I spent my first day in Zion Canyon, the most popular area in Zion National Park. I had an action-packed day and did three hikes.
+
+- Riverside Walk (45 minutes)
+- Emerald Pools (2 hours including breaks)
+- Angels Landing (3.5 hours including breaks)
+
+### Riverside Walk
+
+This easy walk is a perfect introduction to Zion Canyon. Because the walk starts at the far end of the canyon, the shuttle ride there is essentially a scenic tour of the canyon. The walk leads to the start of the famous Narrows hike, which involves walking in the Virgin River. The Narrows were closed at the time due to the strong current of the river, which was extremely cloudy with debris and things like tree branches floating in it.
+The canyon walls loom tall overhead, providing shade and waterfall-viewing opportunities.
+
+### Emerald Pools
+
+The Emerald Pools Trail took me to three pools of water, with tall waterfalls flowing into the lower and upper pools. This hike was crowded at times, especially at the lower and upper pools. The middle pool was surrounded by a calm area that was perfect for a break.
+
+Rather than completing the full loop to take me back to the start of the trail, I took the Kayenta Trail offshoot to reach the start of Angels Landing Trail. The Kayenta Trail was unexpectedly spectacular; there were expansive canyon views along the entire trail, as well as a zoomed-out view of all of the waterfalls on the Emerald Pools Trail.
+
+![View from Kayenta Trail](/images/2-days-in-zion/zion_kayenta-optimized.jpg)
+*The view from the Kayenta Trail*
+
+### Angels Landing
+
+This hike has 2 parts: the "regular trail" part (West Rim Trail to Scout Lookout) and the chain part (Angels Landing). The regular trail is a steep, paved trail that leads to an impressive top-down view of Zion Canyon (Scout Lookout). I spent an hour here resting, snacking, and waiting for the crowd to lessen. The chain part is a scramble along a sandstone ridge, with chains along the rock to help you hang on. The view of the canyon below is awesome and possibly dizzying. Though the path along the ridge is exposed, it's well-designed with good foot placements. Some of the people along the ridge looked scared; I'm glad I started the hike later in the day when there were less people needing to pass by each other. I spent another hour at the top of the ridge to take in the view and rest my legs.
+
+Angels Landing permit note: In May 2023, I needed to apply for a permit a day in advance in order to do the chain part of the hike.
+
+## Day 2 Itinerary
+
+I split my time between the lesser-visited Kolob Terrace and the popular Zion Canyon. This was a relaxing day with less hiking.
+- Kolob Terrace
+    - Wildcat Canyon to Northgate Peaks (2 hours)
+- Zion Canyon
+    - Weeping Rock (30 minutes)
+    - Court of the Patriarchs lookout (10 minutes)
+
+### Wildcat Canyon to Northgate Peaks (Kolob Terrace)
+
+The Northgate Peaks hike takes place in Kolob Terrace, a more secluded and higher-elevation area than Zion Canyon. The hike went through forests and meadows with little elevation change. The end of the trail offers a view of Wildcat Canyon and smooth sandstone peaks. Online, I saw that it's possible to scramble up one of the peaks. I was tempted, but I decided against it because I was alone, wearing worn-out shoes, and not well-prepared for the weather, which was starting to snow and thunder. Since it was my last day at Zion, I decided to drive back to Zion Canyon afterward to see a couple more viewpoints. The one-hour drive had beautiful scenery.
+
+### Weeping Rock
+
+This mild hike leads to an interesting canyon wall where water is seeping out in a spray and plants are growing on the wall. There is a bench carved into the rock where you can take a seat and enjoy the view of Zion Canyon. 
+
+### Court of the Patriarchs
+
+A 3-minute walk leads to a lookout point where you can view and read about the majestic peaks visible here.
+
+## How I Planned My Trip
+
+To plan my trip, the first thing I did was check the official [Zion National Park Service website](https://www.nps.gov/zion/index.htm). It's important to note any road closures, trail closures, permits required, and shuttle hours.
+
+## Lodging and transportation
+
+I stayed in the town of Hurricane, a 45-minute drive away from the Zion Canyon Visitors Center. I booked an Airbnb guesthouse, which had a comprehensive kitchenette and a laundry machine. I made a lot of ham and cheese sandwiches. I brought an Aeropress to make my own coffee, which I thoroughly enjoyed.
+
+I drove here directly from a prior trip at Lake Tahoe, about 9 hours away. After the trip, I drove back to LA which took 8 hours, with a stop in Las Vegas for food.
+
+## What to do next time
+
+- Since this past trip was a solo trip, I'd like to revisit the park with friends next time. I would not mind repeating hikes since everything I had done was enjoyable.
+- Climbing: I passed by rope-climbing areas both inside Zion Canyon and on the way to Kolob Terrace (Lambs Knoll) that looked intriguing.
+- The East Rim looks like it would have amazing views, though an AWD car or shuttle is needed to reach the trails on this side.
+- The Narrows
+- The Subway hike from Kolob Terrace. The branch off to the Subway from Wildcat Canyon Trail had a great view
+- A longer road trip encompassing other parks in the area
