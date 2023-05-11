@@ -1,6 +1,6 @@
 ---
 title: 'How I spent 2 days in Zion National Park'
-date: '2023-05-11'
+updated_date: '2023-05-11'
 visited_date: '2023-05-02'
 ---
 

@@ -23,12 +23,16 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string })
-    }
+      ...(matterResult.data as {
+        updated_date: string;
+        title: string;
+        visited_date: string;
+      }),
+    };
   })
   // Sort posts by date
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    if (a.updated_date < b.updated_date) {
       return 1
     } else {
       return -1
@@ -64,6 +68,10 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string })
-  }
+    ...(matterResult.data as {
+      updated_date: string;
+      title: string,
+      visited_date: string,
+    }),
+  };
 }

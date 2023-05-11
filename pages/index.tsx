@@ -10,7 +10,7 @@ export default function Home({
   allPostsData
 }: {
   allPostsData: {
-    date: string
+    updated_date: string
     title: string
     id: string
   }[]
@@ -23,12 +23,12 @@ export default function Home({
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h1 className={utilStyles.headingLg}>Latest posts</h1>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
+          {allPostsData.map(({ id, updated_date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <Date dateString={updated_date} />
               </small>
             </li>
           ))}
