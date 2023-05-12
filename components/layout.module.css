@@ -12,7 +12,8 @@
 }
 
 a.headerItem {
-  color: rgb(55, 65, 81)
+  color: rgb(55, 65, 81);
+  padding-right: 1rem;
 }
 
 .backToHome {

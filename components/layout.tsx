@@ -8,10 +8,10 @@ export const siteTitle = 'Jess Goes Outside'
 
 export default function Layout({
   children,
-  home
+  showBottomHomeLink, 
 }: {
   children: React.ReactNode
-  home?: boolean
+  showBottomHomeLink?: boolean
 }) {
   return (
     <div className={styles.container}>
@@ -32,11 +32,12 @@ export default function Layout({
       </Head>
       <header className={styles.header}>
         <nav>
+          <Link className={styles.headerItem} href="/">Home</Link>
           <Link className={styles.headerItem} href="/about">About</Link>
         </nav>
       </header>
       <main>{children}</main>
-      {!home && (
+      {showBottomHomeLink && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
         </div>
