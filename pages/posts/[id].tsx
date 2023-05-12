@@ -24,8 +24,6 @@ export default function Post({
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.updated_date} />
-          &nbsp;|
           Visited <Date dateString={postData.visited_date} formatString={'LLLL yyyy'} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
