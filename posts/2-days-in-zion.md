@@ -15,15 +15,15 @@ I spent my first day in Zion Canyon, the most popular area in Zion National Park
 
 - Day 1
   - Zion Canyon
-    - Riverside Walk (45 minutes)
-    - Emerald Pools (2 hours including breaks)
-    - Angels Landing (3.5 hours including breaks)
+    - [Riverside Walk](#riverside-walk) (45 minutes)
+    - [Emerald Pools](#emerald-pools) (2 hours including breaks)
+    - [Angels Landing](#angels-landing) (3.5 hours including breaks)
 - Day 2
   - Kolob Terrace
-    - Wildcat Canyon to Northgate Peaks (2 hours)
+    - [Wildcat Canyon to Northgate Peaks](#wildcat-canyon-to-northgate-peaks) (2 hours)
   - Zion Canyon
-    - Weeping Rock (30 minutes)
-    - Court of the Patriarchs lookout (10 minutes)
+    - [Weeping Rock](#weeping-rock) (30 minutes)
+    - [Court of the Patriarchs](#court-of-the-patriarchs) (10 minutes)
 
 ## Riverside Walk
 
@@ -56,7 +56,7 @@ Angels Landing permit note: In May 2023, I needed to apply for a permit a day in
 ![View out of the canyon from Angels Landing](/images/2-days-in-zion/zion_angelslandingview-optimized.jpg)
 _View out of the canyon from Angels Landing_
 
-## Wildcat Canyon to Northgate Peaks (Kolob Terrace)
+## Wildcat Canyon to Northgate Peaks
 
 ![Kolob Terrace drive](/images/2-days-in-zion/zion_kolob_terrace-optimized.jpg)
 _The view while driving Kolob Terrace Road_
