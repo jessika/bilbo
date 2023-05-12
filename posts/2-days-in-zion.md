@@ -5,24 +5,37 @@ visited_date: '2023-05-02'
 ---
 
 ![View from Angels Landing](/images/2-days-in-zion/zion_angels_landing_canyon_end-optimized.jpg)
-*View from Angels Landing*
+*View into the canyon from Angels Landing*
 
-Here's how I spent 2 days in Zion National Park.
+Here's how I spent 2 days in Zion National Park. See how I spent the rest of my Utah trip in [my post about Bryce Canyon National Park](1-days-in-bryce.md).
 
-## Day 1 Itinerary
+## Two day itinerary
 
-I spent my first day in Zion Canyon, the most popular area in Zion National Park. I had an action-packed day and did three hikes.
+I spent my first day in Zion Canyon, the most popular area in Zion National Park. I had an action-packed day and did three hikes. On the second day, I split my time between the lesser-visited Kolob Terrace and the popular Zion Canyon. This was a relaxing day with less hiking.
 
-- Riverside Walk (45 minutes)
-- Emerald Pools (2 hours including breaks)
-- Angels Landing (3.5 hours including breaks)
+- Day 1
+  - Zion Canyon
+    - Riverside Walk (45 minutes)
+    - Emerald Pools (2 hours including breaks)
+    - Angels Landing (3.5 hours including breaks)
+- Day 2
+  - Kolob Terrace
+      - Wildcat Canyon to Northgate Peaks (2 hours)
+  - Zion Canyon
+      - Weeping Rock (30 minutes)
+      - Court of the Patriarchs lookout (10 minutes)
 
-### Riverside Walk
+## Riverside Walk
+
+![Riverside Walk View](/images/2-days-in-zion/zion_riverside-optimized.jpg)
 
 This easy walk is a perfect introduction to Zion Canyon. Because the walk starts at the far end of the canyon, the shuttle ride there is essentially a scenic tour of the canyon. The walk leads to the start of the famous Narrows hike, which involves walking in the Virgin River. The Narrows were closed at the time due to the strong current of the river, which was extremely cloudy with debris and things like tree branches floating in it.
 The canyon walls loom tall overhead, providing shade and waterfall-viewing opportunities.
 
-### Emerald Pools
+## Emerald Pools
+
+![Emerald Pools](/images/2-days-in-zion/zion_emerald_pools_underneath-optimized.jpg)
+*Waterfall from the middle to the lower emerald pool*
 
 The Emerald Pools Trail took me to three pools of water, with tall waterfalls flowing into the lower and upper pools. This hike was crowded at times, especially at the lower and upper pools. The middle pool was surrounded by a calm area that was perfect for a break.
 
@@ -31,34 +44,43 @@ Rather than completing the full loop to take me back to the start of the trail, 
 ![View from Kayenta Trail](/images/2-days-in-zion/zion_kayenta-optimized.jpg)
 *The view from the Kayenta Trail*
 
-### Angels Landing
+## Angels Landing
+
+![Switchbacks on West Rim Trail](/images/2-days-in-zion/zion_switchbacks-optimized.jpg)
+*Steep switchbacks on the West Rim Trail, the first part of the Angels Landing Trail*
 
 This hike has 2 parts: the "regular trail" part (West Rim Trail to Scout Lookout) and the chain part (Angels Landing). The regular trail is a steep, paved trail that leads to an impressive top-down view of Zion Canyon (Scout Lookout). I spent an hour here resting, snacking, and waiting for the crowd to lessen. The chain part is a scramble along a sandstone ridge, with chains along the rock to help you hang on. The view of the canyon below is awesome and possibly dizzying. Though the path along the ridge is exposed, it's well-designed with good foot placements. Some of the people along the ridge looked scared; I'm glad I started the hike later in the day when there were less people needing to pass by each other. I spent another hour at the top of the ridge to take in the view and rest my legs.
 
 Angels Landing permit note: In May 2023, I needed to apply for a permit a day in advance in order to do the chain part of the hike.
 
-## Day 2 Itinerary
+![View out of the canyon from Angels Landing](/images/2-days-in-zion/zion_angelslandingview-optimized.jpg)
+*View out of the canyon from Angels Landing*
 
-I split my time between the lesser-visited Kolob Terrace and the popular Zion Canyon. This was a relaxing day with less hiking.
-- Kolob Terrace
-    - Wildcat Canyon to Northgate Peaks (2 hours)
-- Zion Canyon
-    - Weeping Rock (30 minutes)
-    - Court of the Patriarchs lookout (10 minutes)
+## Wildcat Canyon to Northgate Peaks (Kolob Terrace)
 
-### Wildcat Canyon to Northgate Peaks (Kolob Terrace)
+![Kolob Terrace drive](/images/2-days-in-zion/zion_kolob_terrace-optimized.jpg)
+*The view while driving Kolob Terrace Road*
 
 The Northgate Peaks hike takes place in Kolob Terrace, a more secluded and higher-elevation area than Zion Canyon. The hike went through forests and meadows with little elevation change. The end of the trail offers a view of Wildcat Canyon and smooth sandstone peaks. Online, I saw that it's possible to scramble up one of the peaks. I was tempted, but I decided against it because I was alone, wearing worn-out shoes, and not well-prepared for the weather, which was starting to snow and thunder. Since it was my last day at Zion, I decided to drive back to Zion Canyon afterward to see a couple more viewpoints. The one-hour drive had beautiful scenery.
 
-### Weeping Rock
+![Northgate Peaks](/images/2-days-in-zion/zion_northgate_peaks-optimized.jpg)
+*The Northgate Peaks*
+
+## Weeping Rock
 
 This mild hike leads to an interesting canyon wall where water is seeping out in a spray and plants are growing on the wall. There is a bench carved into the rock where you can take a seat and enjoy the view of Zion Canyon. 
 
-### Court of the Patriarchs
+![Weeping Rock](/images/2-days-in-zion/zion_weeping_rock-optimized.jpg)
+*This is Weeping Rock*
+
+## Court of the Patriarchs
+
+![Court of the Patriarchs](/images/2-days-in-zion/zion_court-optimized.jpg)
+*View of the three "patriarchs"*
 
 A 3-minute walk leads to a lookout point where you can view and read about the majestic peaks visible here.
 
-## How I Planned My Trip
+## How I planned my trip
 
 To plan my trip, the first thing I did was check the official [Zion National Park Service website](https://www.nps.gov/zion/index.htm). It's important to note any road closures, trail closures, permits required, and shuttle hours.
 
