@@ -7,7 +7,7 @@ visited_date: '2023-05-03'
 ![Forest view from Bryce Point](/images/1-day-in-bryce/bryce_point_forest-optimized.jpg)
 *Forest view from Bryce Point*
 
-Here's how I spent 1 day in Bryce Canyon National Park. See how I spent the rest of my Utah trip in [my post about Zion National Park](2-days-in-zion.md).
+Here's how I spent 1 day in Bryce Canyon National Park. See how I spent the rest of my Utah trip in [my post about Zion National Park](/posts/2-days-in-zion).
 
 ## Itinerary
 

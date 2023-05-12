@@ -7,7 +7,7 @@ visited_date: '2023-05-02'
 ![View from Angels Landing](/images/2-days-in-zion/zion_angels_landing_canyon_end-optimized.jpg)
 *View into the canyon from Angels Landing*
 
-Here's how I spent 2 days in Zion National Park. See how I spent the rest of my Utah trip in [my post about Bryce Canyon National Park](1-days-in-bryce.md).
+Here's how I spent 2 days in Zion National Park. See how I spent the rest of my Utah trip in [my post about Bryce Canyon National Park](/posts/1-day-in-bryce).
 
 ## Two day itinerary
 
