@@ -1,11 +1,11 @@
 ---
-title: 'How I spent 2 days in Zion National Park'
-updated_date: '2023-05-11'
-visited_date: '2023-05-02'
+title: "How I spent 2 days in Zion National Park"
+updated_date: "2023-05-11"
+visited_date: "2023-05-02"
 ---
 
 ![View from Angels Landing](/images/2-days-in-zion/zion_angels_landing_canyon_end-optimized.jpg)
-*View into the canyon from Angels Landing*
+_View into the canyon from Angels Landing_
 
 Here's how I spent 2 days in Zion National Park. See how I spent the rest of my Utah trip in [my post about Bryce Canyon National Park](/posts/1-day-in-bryce).
 
@@ -20,10 +20,10 @@ I spent my first day in Zion Canyon, the most popular area in Zion National Park
     - Angels Landing (3.5 hours including breaks)
 - Day 2
   - Kolob Terrace
-      - Wildcat Canyon to Northgate Peaks (2 hours)
+    - Wildcat Canyon to Northgate Peaks (2 hours)
   - Zion Canyon
-      - Weeping Rock (30 minutes)
-      - Court of the Patriarchs lookout (10 minutes)
+    - Weeping Rock (30 minutes)
+    - Court of the Patriarchs lookout (10 minutes)
 
 ## Riverside Walk
 
@@ -35,48 +35,48 @@ The canyon walls loom tall overhead, providing shade and waterfall-viewing oppor
 ## Emerald Pools
 
 ![Emerald Pools](/images/2-days-in-zion/zion_emerald_pools_underneath-optimized.jpg)
-*Waterfall from the middle to the lower emerald pool*
+_Waterfall from the middle to the lower emerald pool_
 
 The Emerald Pools Trail took me to three pools of water, with tall waterfalls flowing into the lower and upper pools. This hike was crowded at times, especially at the lower and upper pools. The middle pool was surrounded by a calm area that was perfect for a break.
 
 Rather than completing the full loop to take me back to the start of the trail, I took the Kayenta Trail offshoot to reach the start of Angels Landing Trail. The Kayenta Trail was unexpectedly spectacular; there were expansive canyon views along the entire trail, as well as a zoomed-out view of all of the waterfalls on the Emerald Pools Trail.
 
 ![View from Kayenta Trail](/images/2-days-in-zion/zion_kayenta-optimized.jpg)
-*The view from the Kayenta Trail*
+_The view from the Kayenta Trail_
 
 ## Angels Landing
 
 ![Switchbacks on West Rim Trail](/images/2-days-in-zion/zion_switchbacks-optimized.jpg)
-*Steep switchbacks on the West Rim Trail, the first part of the Angels Landing Trail*
+_Steep switchbacks on the West Rim Trail, the first part of the Angels Landing Trail_
 
 This hike has 2 parts: the "regular trail" part (West Rim Trail to Scout Lookout) and the chain part (Angels Landing). The regular trail is a steep, paved trail that leads to an impressive top-down view of Zion Canyon (Scout Lookout). I spent an hour here resting, snacking, and waiting for the crowd to lessen. The chain part is a scramble along a sandstone ridge, with chains along the rock to help you hang on. The view of the canyon below is awesome and possibly dizzying. Though the path along the ridge is exposed, it's well-designed with good foot placements. Some of the people along the ridge looked scared; I'm glad I started the hike later in the day when there were less people needing to pass by each other. I spent another hour at the top of the ridge to take in the view and rest my legs.
 
 Angels Landing permit note: In May 2023, I needed to apply for a permit a day in advance in order to do the chain part of the hike.
 
 ![View out of the canyon from Angels Landing](/images/2-days-in-zion/zion_angelslandingview-optimized.jpg)
-*View out of the canyon from Angels Landing*
+_View out of the canyon from Angels Landing_
 
 ## Wildcat Canyon to Northgate Peaks (Kolob Terrace)
 
 ![Kolob Terrace drive](/images/2-days-in-zion/zion_kolob_terrace-optimized.jpg)
-*The view while driving Kolob Terrace Road*
+_The view while driving Kolob Terrace Road_
 
 The Northgate Peaks hike takes place in Kolob Terrace, a more secluded and higher-elevation area than Zion Canyon. The hike went through forests and meadows with little elevation change. The end of the trail offers a view of Wildcat Canyon and smooth sandstone peaks. Online, I saw that it's possible to scramble up one of the peaks. I was tempted, but I decided against it because I was alone, wearing worn-out shoes, and not well-prepared for the weather, which was starting to snow and thunder. Since it was my last day at Zion, I decided to drive back to Zion Canyon afterward to see a couple more viewpoints. The one-hour drive had beautiful scenery.
 
 ![Northgate Peaks](/images/2-days-in-zion/zion_northgate_peaks-optimized.jpg)
-*The Northgate Peaks*
+_The Northgate Peaks_
 
 ## Weeping Rock
 
-This mild hike leads to an interesting canyon wall where water is seeping out in a spray and plants are growing on the wall. There is a bench carved into the rock where you can take a seat and enjoy the view of Zion Canyon. 
+This mild hike leads to an interesting canyon wall where water is seeping out in a spray and plants are growing on the wall. There is a bench carved into the rock where you can take a seat and enjoy the view of Zion Canyon.
 
 ![Weeping Rock](/images/2-days-in-zion/zion_weeping_rock-optimized.jpg)
-*This is Weeping Rock*
+_This is Weeping Rock_
 
 ## Court of the Patriarchs
 
 ![Court of the Patriarchs](/images/2-days-in-zion/zion_court-optimized.jpg)
-*View of the three "patriarchs"*
+_View of the three "patriarchs"_
 
 A 3-minute walk leads to a lookout point where you can view and read about the majestic peaks visible here.
 

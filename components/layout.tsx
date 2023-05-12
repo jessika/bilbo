@@ -1,17 +1,17 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-export const siteTitle = 'Jess Goes Outside'
+export const siteTitle = "Jess Goes Outside";
 
 export default function Layout({
   children,
-  showBottomHomeLink, 
+  showBottomHomeLink,
 }: {
-  children: React.ReactNode
-  showBottomHomeLink?: boolean
+  children: React.ReactNode;
+  showBottomHomeLink?: boolean;
 }) {
   return (
     <div className={styles.container}>
@@ -32,8 +32,12 @@ export default function Layout({
       </Head>
       <header className={styles.header}>
         <nav>
-          <Link className={styles.headerItem} href="/">Home</Link>
-          <Link className={styles.headerItem} href="/about">About</Link>
+          <Link className={styles.headerItem} href="/">
+            Home
+          </Link>
+          <Link className={styles.headerItem} href="/about">
+            About
+          </Link>
         </nav>
       </header>
       <main>{children}</main>
@@ -43,5 +47,5 @@ export default function Layout({
         </div>
       )}
     </div>
-  )
+  );
 }
