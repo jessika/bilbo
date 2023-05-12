@@ -34,9 +34,14 @@ export function getSortedPostsData() {
   return allPostsData.sort((a, b) => {
     if (a.updated_date < b.updated_date) {
       return 1
-    } else {
+    }
+    if (a.updated_date > b.updated_date) {
       return -1
     }
+    if (a.visited_date < b.visited_date) {
+      return 1
+    }
+    return -1
   })
 }
 
