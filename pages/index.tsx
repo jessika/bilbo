@@ -28,7 +28,7 @@ export default function Home({
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={updated_date} />
+                <Date dateString={updated_date} formatString={"LLLL yyyy"} />
               </small>
             </li>
           ))}
