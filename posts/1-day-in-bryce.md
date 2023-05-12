@@ -1,11 +1,11 @@
 ---
-title: 'How I spent 1 day in Bryce Canyon National Park'
-updated_date: '2023-05-11'
-visited_date: '2023-05-03'
+title: "How I spent 1 day in Bryce Canyon National Park"
+updated_date: "2023-05-11"
+visited_date: "2023-05-03"
 ---
 
 ![Forest view from Bryce Point](/images/1-day-in-bryce/bryce_point_forest-optimized.jpg)
-*Forest view from Bryce Point*
+_Forest view from Bryce Point_
 
 Here's how I spent 1 day in Bryce Canyon National Park. See how I spent the rest of my Utah trip in [my post about Zion National Park](/posts/2-days-in-zion).
 
@@ -18,18 +18,18 @@ With only one day here, I debated whether to do shorter hikes and see more areas
 This is a long hike. It's an 8-mile loop that takes you both into and along the rim of Fairyland Canyon. The view is otherworldly; walking among the giant hoodoos and desert landscape feels unreal.
 
 ![View along Fairyland Loop Trail](/images/1-day-in-bryce/bryce_fairylandloop-optimized.jpg)
-*View along Fairyland Loop Trail*
+_View along Fairyland Loop Trail_
 
 ## Bryce Point
 
 The view at Bryce Point is mind-boggling. It overlooks a huge canyon with an extremely dense concentration of hoodoos.
 
 ![Bryce Point viewing platform](/images/1-day-in-bryce/bryce_point_platform-optimized.jpg)
-*Bryce Point viewing platform*
+_Bryce Point viewing platform_
 
 ![Bryce Point main view](/images/1-day-in-bryce/bryce_viewfrombrycepoint-optimized.jpg)
-*View from Bryce Point*
+_View from Bryce Point_
 
 ## Getting here
 
-The drive from Hurricane, the town I was staying in near Zion National Park, to Bryce Canyon is 2.5 hours. It's very scenic with a lot of long 2-lane roads. Gas stations are plentiful, with prices much cheaper than California. 
+The drive from Hurricane, the town I was staying in near Zion National Park, to Bryce Canyon is 2.5 hours. It's very scenic with a lot of long 2-lane roads. Gas stations are plentiful, with prices much cheaper than California.
