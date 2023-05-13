@@ -1,20 +1,36 @@
+/**
+ * @fileoverview Functions that help with getting post data.
+ */
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import remarkParse from "remark-parse";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import rehypeSlug from "rehype-slug";
-import remarkRehype from "remark-rehype";
-import { unified } from "unified";
-import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getSortedPostsData() {
+export interface PostMetadata {
+  id: string;
+  updated_date: string;
+  title: string;
+  visited_date: string;
+}
+
+export interface PostData {
+  mdxSource: MDXRemoteSerializeResult;
+  id: string;
+  updated_date: string;
+  title: string;
+  visited_date: string;
+}
+
+export function getSortedPostMetadatas(): PostMetadata[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, "");
+    const id = getSlugFromFileName(fileName);
 
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName);
@@ -48,41 +64,44 @@ export function getSortedPostsData() {
   });
 }
 
-export function getAllPostIds() {
+export function getAllPostIds(): string[] {
   const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
+  return fileNames.map((fileName) => getSlugFromFileName(fileName));
 }
 
-export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+export async function getPostData(id: string): Promise<PostData> {
+  const fullPath = path.join(postsDirectory, getFileNameFromSlug(id));
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
-
-  // Use remark to convert markdown into HTML string
-  const processedContent = await unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypeSlug)
-    .use(rehypeStringify)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const { content: fileContent, data: frontMatter } = matter(fileContents);
+  const mdxSource = await serialize(fileContent, {
+    // Optionally pass remark/rehype plugins
+    mdxOptions: {
+      remarkPlugins: [],
+      rehypePlugins: [rehypeSlug],
+    },
+    scope: frontMatter,
+  });
 
   // Combine the data with the id and contentHtml
   return {
     id,
-    contentHtml,
-    ...(matterResult.data as {
+    mdxSource,
+    ...(frontMatter as {
       updated_date: string;
       title: string;
       visited_date: string;
     }),
   };
+}
+
+function getSlugFromFileName(fileName: string): string {
+  if (fileName.endsWith(".mdx")) {
+    return fileName.replace(/\.mdx$/, "");
+  }
+  throw Error(`Could not find slug in filename=${fileName}`);
+}
+
+function getFileNameFromSlug(slug: string): string {
+  return `${slug}.mdx`;
 }
