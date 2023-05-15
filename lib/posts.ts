@@ -27,9 +27,7 @@ export interface PostData {
 }
 
 export function getSortedPostMetadatas(): PostMetadata[] {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const allPostsData = getPostFileNames().map((fileName) => {
     const id = getSlugFromFileName(fileName);
 
     // Read markdown file as string
@@ -65,8 +63,7 @@ export function getSortedPostMetadatas(): PostMetadata[] {
 }
 
 export function getAllPostIds(): string[] {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames.map((fileName) => getSlugFromFileName(fileName));
+  return getPostFileNames().map((fileName) => getSlugFromFileName(fileName));
 }
 
 export async function getPostData(id: string): Promise<PostData> {
@@ -95,8 +92,16 @@ export async function getPostData(id: string): Promise<PostData> {
   };
 }
 
+function getPostFileNames() {
+  return fs.readdirSync(postsDirectory).filter((fileName) => isMdx(fileName));
+}
+
+function isMdx(fileName: string) {
+  return fileName.endsWith(".mdx");
+}
+
 function getSlugFromFileName(fileName: string): string {
-  if (fileName.endsWith(".mdx")) {
+  if (isMdx(fileName)) {
     return fileName.replace(/\.mdx$/, "");
   }
   throw Error(`Could not find slug in filename=${fileName}`);
