@@ -35,6 +35,11 @@ a.hyperlink:hover:before {
   display: flex;
 }
 
+@media (max-width: 1250px) {
+  .imageAndTextContainer {
+    flex-direction: column;
+  }
+}
 .listItem {
   margin-bottom: 1.25rem;
 }
