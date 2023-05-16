@@ -1,11 +1,11 @@
 .container {
-  max-width: 36rem;
+  max-width: 44rem;
   padding: 0 1rem;
   margin: 1rem auto 6rem;
 }
 
 .header {
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   padding-bottom: 3rem;
@@ -13,7 +13,7 @@
 
 a.headerItem {
   color: rgb(55, 65, 81);
-  padding-right: 1rem;
+  margin-right: 1rem;
 }
 
 .backToHome {
