@@ -6,40 +6,19 @@
 
 a.hyperlink {
   color: inherit;
-  position: relative;
-  text-decoration: none;
-}
-
-a.hyperlink:focus .textContainer .subtext,
-a.hyperlink:hover .textContainer .subtext {
-  color: rgb(175, 175, 175);
-}
-
-a.hyperlink:focus .textContainer,
-a.hyperlink:hover .textContainer {
-  color: rgb(242, 242, 242);
-}
-
-a.hyperlink:focus:before,
-a.hyperlink:hover:before {
-  content: "\A";
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .imageAndTextContainer {
   display: flex;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 600px) {
   .imageAndTextContainer {
     flex-direction: column;
+    max-width: 300px;
   }
 }
+
 .listItem {
   margin-bottom: 1.25rem;
 }
@@ -49,5 +28,5 @@ a.hyperlink:hover:before {
 }
 
 .textContainer {
-  z-index: 1;
+  padding: 0.25rem 0 1rem 0;
 }
