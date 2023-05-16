@@ -1,13 +1,6 @@
 import Link from "next/link";
 import utilStyles from "../styles/utils.module.css";
-import {
-  hyperlink,
-  imageAndTextContainer,
-  listItem,
-  subtext,
-  textContainer,
-  thumbnailContainer,
-} from "./post-list-item.module.css";
+import styles from "./post-list-item.module.css";
 import Date from "./date";
 import Image from "next/image";
 
@@ -25,17 +18,17 @@ export default function PostListItem({
   visitedDate: string;
 }) {
   return (
-    <li className={listItem}>
+    <li className={styles.listItem}>
       <Link
-        className={`${hyperlink} ${imageAndTextContainer}`}
+        className={`${styles.hyperlink} ${styles.imageAndTextContainer}`}
         href={`/posts/${id}`}
       >
-        <div className={thumbnailContainer}>
+        <div className={styles.thumbnailContainer}>
           <Image src={thumbnail} height={220} width={330} alt="" />
         </div>
-        <div className={textContainer}>
+        <div className={styles.textContainer}>
           <div>{title}</div>
-          <div className={`${utilStyles.lightText} ${subtext}`}>
+          <div className={`${utilStyles.lightText} ${styles.subtext}`}>
             <Date dateString={updatedDate} />
           </div>
         </div>
