@@ -15,6 +15,7 @@ export interface PostMetadata {
   id: string;
   updated_date: string;
   title: string;
+  thumbnail: string;
   visited_date: string;
 }
 
@@ -43,6 +44,7 @@ export function getSortedPostMetadatas(): PostMetadata[] {
       ...(matterResult.data as {
         updated_date: string;
         title: string;
+        thumbnail: string;
         visited_date: string;
       }),
     };

@@ -5,6 +5,7 @@ import { PostMetadata, getSortedPostMetadatas } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import { GetStaticProps } from "next";
+import PostListItem from "../components/post-list-item";
 
 export default function Home({
   postMetadatas,
@@ -19,15 +20,18 @@ export default function Home({
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h1 className={utilStyles.headingLg}>Latest posts</h1>
         <ul className={utilStyles.list}>
-          {postMetadatas.map(({ id, updated_date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={updated_date} formatString={"LLLL yyyy"} />
-              </small>
-            </li>
-          ))}
+          {postMetadatas.map(
+            ({ id, updated_date, thumbnail, title, visited_date }) => (
+              <PostListItem
+                key={id}
+                id={id}
+                thumbnail={thumbnail}
+                title={title}
+                updatedDate={updated_date}
+                visitedDate={visited_date}
+              />
+            )
+          )}
         </ul>
       </section>
     </Layout>
