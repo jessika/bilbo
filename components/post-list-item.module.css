@@ -8,25 +8,29 @@ a.hyperlink {
   color: inherit;
 }
 
-.imageAndTextContainer {
+.content {
   display: flex;
 }
 
-@media (max-width: 600px) {
-  .imageAndTextContainer {
-    flex-direction: column;
-    max-width: 300px;
-  }
+.content.narrow {
+  flex-direction: column;
+  max-width: 300px;
 }
 
-.listItem {
+.component:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 
-.subtext {
-  font-size: 18px;
+.textContainer {
+  padding-top: 0.25rem;
 }
 
-.textContainer {
-  padding: 0.25rem 0 1rem 0;
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .component {
+    max-width: 300px;
+  }
 }

@@ -1,12 +1,26 @@
 import Layout from "../../components/layout";
-import { getAllPostIds, getPostData, PostData } from "../../lib/posts";
+import {
+  getAllPostIds,
+  getPostData,
+  getSuggestedPostMetadatas,
+  PostData,
+  PostMetadata,
+} from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { MDXRemote } from "next-mdx-remote";
+import PostListItem, { ItemLayout } from "../../components/post-list-item";
+import styles from "./id.module.css";
 
-export default function Post({ postData }: { postData: PostData }) {
+export default function Post({
+  postData,
+  suggestedPostMetadatas,
+}: {
+  postData: PostData;
+  suggestedPostMetadatas: PostMetadata[];
+}) {
   return (
     <Layout showBottomHomeLink>
       <Head>
@@ -22,6 +36,24 @@ export default function Post({ postData }: { postData: PostData }) {
           <MDXRemote {...postData.mdxSource} />
         </main>
       </article>
+      <div className={styles.suggestedPostsContainer}>
+        <h2>Suggested posts</h2>
+        <ul className={`${utilStyles.list} ${styles.suggestedPosts}`}>
+          {suggestedPostMetadatas.map(
+            ({ id, updated_date, thumbnail, title, visited_date }) => (
+              <PostListItem
+                key={id}
+                id={id}
+                itemLayout={ItemLayout.Narrow}
+                thumbnail={thumbnail}
+                title={title}
+                updatedDate={updated_date}
+                visitedDate={visited_date}
+              />
+            )
+          )}
+        </ul>
+      </div>
     </Layout>
   );
 }
@@ -37,9 +69,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const postData = await getPostData(params?.id as string);
+  const suggestedPostMetadatas = getSuggestedPostMetadatas(
+    params?.id as string
+  );
   return {
     props: {
       postData,
+      suggestedPostMetadatas,
     },
   };
 };
