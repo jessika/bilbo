@@ -11,6 +11,9 @@ import rehypeSlug from "rehype-slug";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
+/** Number of posts to show in the suggested posts list. */
+const NUM_SUGGESTED_POSTS = 2;
+
 export interface PostMetadata {
   id: string;
   updated_date: string;
@@ -62,6 +65,32 @@ export function getSortedPostMetadatas(): PostMetadata[] {
     }
     return -1;
   });
+}
+
+/** Returns suggested posts based on a current post id. */
+export function getSuggestedPostMetadatas(id: string): PostMetadata[] {
+  const postMetadatas = getSortedPostMetadatas();
+  const currentPostIndex = postMetadatas.findIndex(
+    (postMetadata) => postMetadata.id === id
+  );
+  // Use the posts written just before the current post
+  const suggestedPostMetadatas = postMetadatas.slice(
+    currentPostIndex + 1,
+    currentPostIndex + 1 + NUM_SUGGESTED_POSTS
+  );
+  // If there are not enough posts, use the most recently written posts
+  if (
+    suggestedPostMetadatas.length < NUM_SUGGESTED_POSTS &&
+    postMetadatas.length > NUM_SUGGESTED_POSTS
+  ) {
+    suggestedPostMetadatas.push(
+      ...postMetadatas.slice(
+        0,
+        NUM_SUGGESTED_POSTS - suggestedPostMetadatas.length
+      )
+    );
+  }
+  return suggestedPostMetadatas;
 }
 
 export function getAllPostIds(): string[] {

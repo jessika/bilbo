@@ -1,0 +1,18 @@
+.suggestedPosts {
+  display: flex;
+}
+
+.suggestedPosts > li {
+  margin-right: 1rem;
+}
+
+.suggestedPostsContainer {
+  border-top: 1px solid #afafaf;
+  margin-top: 4rem;
+}
+
+@media (max-width: 600px) {
+  .suggestedPosts {
+    flex-direction: column;
+  }
+}

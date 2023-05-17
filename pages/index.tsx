@@ -2,8 +2,6 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { PostMetadata, getSortedPostMetadatas } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
 import { GetStaticProps } from "next";
 import PostListItem from "../components/post-list-item";
 
@@ -17,7 +15,7 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section>
         <h1 className={utilStyles.headingLg}>Latest posts</h1>
         <ul className={utilStyles.list}>
           {postMetadatas.map(
