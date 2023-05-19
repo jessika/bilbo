@@ -1,3 +1,5 @@
+@use "styles/typography.scss";
+
 .suggestedPosts {
   display: flex;
 }
@@ -9,6 +11,11 @@
 .suggestedPostsContainer {
   border-top: 1px solid #afafaf;
   margin-top: 4rem;
+}
+
+.date {
+  @include typography.subheader;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 600px) {

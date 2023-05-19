@@ -1,3 +1,5 @@
+@use "styles/typography.scss";
+
 .thumbnailContainer {
   flex: none;
   margin-right: 1rem;
@@ -21,8 +23,12 @@ a.hyperlink {
   margin-bottom: 1.25rem;
 }
 
-.textContainer {
-  padding-top: 0.25rem;
+h3.heading {
+  margin: 0.5rem 0;
+}
+
+.date {
+  @include typography.subheader;
 }
 
 @media (max-width: 600px) {

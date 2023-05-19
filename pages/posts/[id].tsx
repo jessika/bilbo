@@ -12,7 +12,7 @@ import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import PostListItem, { ItemLayout } from "../../components/post-list-item";
-import styles from "./id.module.css";
+import styles from "./id.module.scss";
 
 export default function Post({
   postData,
@@ -27,8 +27,8 @@ export default function Post({
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <h1>{postData.title}</h1>
+        <div className={styles.date}>
           Visited{" "}
           <Date dateString={postData.visited_date} formatString={"LLLL yyyy"} />
         </div>

@@ -1,6 +1,5 @@
 import Link from "next/link";
-import utilStyles from "../styles/utils.module.css";
-import styles from "./post-list-item.module.css";
+import styles from "./post-list-item.module.scss";
 import Date from "./date";
 import Image from "next/image";
 
@@ -37,9 +36,9 @@ export default function PostListItem({
         <div className={styles.thumbnailContainer}>
           <Image src={thumbnail} height={220} width={330} alt="" />
         </div>
-        <div className={styles.textContainer}>
-          <div className={utilStyles.headingMd}>{title}</div>
-          <div className={`${utilStyles.lightText}`}>
+        <div>
+          <h3 className={styles.heading}>{title}</h3>
+          <div className={styles.date}>
             <Date dateString={updatedDate} />
           </div>
         </div>
