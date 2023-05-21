@@ -14,17 +14,31 @@ import { MDXRemote } from "next-mdx-remote";
 import PostListItem, { ItemLayout } from "../../components/post-list-item";
 import styles from "./id.module.scss";
 import Image from "next/image";
+import { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 
 /** Components used within MDX files. */
 const mdxComponents = {
-  img: (props: { alt: string; height: string; width: string; src: string }) => {
+  img: (
+    props: DetailedHTMLProps<
+      ImgHTMLAttributes<HTMLImageElement>,
+      HTMLImageElement
+    >
+  ) => {
     const style = {
       maxWidth: `${props.width}px`,
       width: "100%",
       height: "auto",
     };
-    // height and width are part of the props, so they get automatically passed here with {...props}
-    return <Image {...props} loading="lazy" style={style} />;
+    return (
+      <Image
+        alt={props.alt || ""}
+        height={props.height as number}
+        width={props.width as number}
+        src={props.src as string}
+        loading="lazy"
+        style={style}
+      />
+    );
   },
 };
 

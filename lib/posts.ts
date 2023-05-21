@@ -110,6 +110,7 @@ export async function getPostData(id: string): Promise<PostData> {
       remarkPlugins: [],
       rehypePlugins: [
         rehypeSlug,
+        //@ts-ignore Type error from rehypeImgSize
         [rehypeImgSize, { dir: "public" }],
         [rehypeFigure, { className: "mdxFigure" }],
       ],
