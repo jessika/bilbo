@@ -13,6 +13,20 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import PostListItem, { ItemLayout } from "../../components/post-list-item";
 import styles from "./id.module.scss";
+import Image from "next/image";
+
+/** Components used within MDX files. */
+const mdxComponents = {
+  img: (props: { alt: string; height: string; width: string; src: string }) => {
+    const style = {
+      maxWidth: `${props.width}px`,
+      width: "100%",
+      height: "auto",
+    };
+    // height and width are part of the props, so they get automatically passed here with {...props}
+    return <Image {...props} loading="lazy" style={style} />;
+  },
+};
 
 export default function Post({
   postData,
@@ -27,13 +41,13 @@ export default function Post({
         <title>{postData.title}</title>
       </Head>
       <article className={styles.article}>
-        <h1>{postData.title}</h1>
+        <h1 className={styles.h1}>{postData.title}</h1>
         <div className={styles.date}>
           Visited{" "}
           <Date dateString={postData.visited_date} formatString={"LLLL yyyy"} />
         </div>
         <main>
-          <MDXRemote {...postData.mdxSource} />
+          <MDXRemote {...postData.mdxSource} components={mdxComponents} />
         </main>
       </article>
       <div className={styles.suggestedPostsContainer}>

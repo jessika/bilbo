@@ -4,6 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import { PostMetadata, getSortedPostMetadatas } from "../lib/posts";
 import { GetStaticProps } from "next";
 import PostListItem from "../components/post-list-item";
+import styles from "./index.module.scss";
 
 export default function Home({
   postMetadatas,
@@ -17,7 +18,7 @@ export default function Home({
       </Head>
       <section>
         <h1 className={utilStyles.headingLg}>Latest posts</h1>
-        <ul className={utilStyles.list}>
+        <ul className={styles.postList}>
           {postMetadatas.map(
             ({ id, updated_date, thumbnail, title, visited_date }) => (
               <PostListItem

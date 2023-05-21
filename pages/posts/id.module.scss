@@ -1,5 +1,9 @@
 @use "styles/typography.scss";
 
+h1.h1 {
+  margin-bottom: 0.5rem;
+}
+
 .article {
   /* Allow long urls to wrap on narrow screens. */
   word-wrap: break-word;
@@ -7,15 +11,13 @@
 
 .suggestedPosts {
   display: flex;
-}
-
-.suggestedPosts > li {
-  margin-right: 1rem;
+  gap: 1rem;
 }
 
 .suggestedPostsContainer {
   border-top: 1px solid #afafaf;
   margin-top: 4rem;
+  padding-top: 1rem;
 }
 
 .date {
