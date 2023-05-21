@@ -1,26 +1,30 @@
 @use "styles/typography.scss";
 
-.thumbnailContainer {
-  flex: none;
-  margin-right: 1rem;
-  width: 300px;
+$thumbnail-width: 300px;
+
+.component {
+  display: flex;
 }
 
-a.hyperlink {
+a.content {
   color: inherit;
 }
 
 .content {
   display: flex;
+  gap: 1rem;
 }
 
-.content.narrow {
-  flex-direction: column;
-  max-width: 300px;
+.thumbnailContainer {
+  display: flex;
 }
 
-.component:not(:last-child) {
-  margin-bottom: 1.25rem;
+.component_narrow {
+  .content {
+    flex-basis: $thumbnail-width;
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 h3.heading {
@@ -33,10 +37,12 @@ h3.heading {
 
 @media (max-width: 600px) {
   .content {
+    flex-basis: $thumbnail-width;
     flex-direction: column;
+    gap: 0;
   }
 
-  .component {
-    max-width: 300px;
+  .component:not(:last-child) {
+    margin-bottom: 1rem;
   }
 }

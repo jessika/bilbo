@@ -17,11 +17,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 h1,
 h2,
 h3 {
@@ -34,4 +29,18 @@ h3 {
 
 h1 {
   font-size: 2rem;
+}
+
+figure.mdxFigure {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 2rem 0;
+}
+
+figure.mdxFigure > figcaption {
+  /* TODO: Combine @subheader mixin */
+  color: #888;
+  font-size: 14px;
+  margin-top: 0.5rem;
 }
