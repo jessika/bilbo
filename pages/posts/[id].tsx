@@ -26,7 +26,7 @@ export default function Post({
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className={styles.article}>
         <h1>{postData.title}</h1>
         <div className={styles.date}>
           Visited{" "}

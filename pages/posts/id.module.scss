@@ -1,5 +1,10 @@
 @use "styles/typography.scss";
 
+.article {
+  /* Allow long urls to wrap on narrow screens. */
+  word-wrap: break-word;
+}
+
 .suggestedPosts {
   display: flex;
 }
