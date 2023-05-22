@@ -10,7 +10,10 @@ export default function Searchbox({
   const [searchText, setSearchText] = useState(initialText);
   const onKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
     if (e.key === "Enter" || e.keyCode === 13) {
-      onChange(searchText);
+      const normalizedSearchText = searchText.trim();
+      if (normalizedSearchText) {
+        onChange(normalizedSearchText);
+      }
     }
   };
 
