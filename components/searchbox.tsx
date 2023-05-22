@@ -1,11 +1,14 @@
 import { KeyboardEventHandler, useState } from "react";
+import Form from "react-bootstrap/Form";
 
 export default function Searchbox({
   initialText = "",
   onChange,
+  placeholder = "",
 }: {
   initialText?: string;
   onChange: (text: string) => void;
+  placeholder?: string;
 }) {
   const [searchText, setSearchText] = useState(initialText);
   const onKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
@@ -16,14 +19,13 @@ export default function Searchbox({
       }
     }
   };
-
   return (
-    <input
-      value={searchText}
+    <Form.Control
+      as="input"
+      onChange={(e) => setSearchText(e.target.value)}
       onKeyDown={onKeyDown}
-      onChange={(e) => {
-        setSearchText(e.target.value);
-      }}
+      placeholder={placeholder}
+      value={searchText}
     />
   );
 }

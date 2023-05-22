@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
 import { useRouter } from "next/router";
 import Searchbox from "../components/searchbox";
 import { useEffect, useState } from "react";
@@ -8,7 +7,6 @@ import PostList from "../components/post-list";
 
 /** Url key whose value is the search text. */
 const searchTextKey = "q";
-const searchboxDescription = "A simple search on post titles";
 
 export default function Search({}: {}) {
   let isLoading = false;
@@ -36,10 +34,14 @@ export default function Search({}: {}) {
         isLoading = false;
       });
     // TODO: Detect url query change when going back in browser history
-    router.push({
-      pathname: router.pathname,
-      query: { [searchTextKey]: searchText },
-    });
+    router.replace(
+      {
+        pathname: router.pathname,
+        query: { [searchTextKey]: searchText },
+      },
+      /* as= */ undefined,
+      { shallow: true }
+    );
   };
 
   useEffect(() => {
@@ -47,16 +49,16 @@ export default function Search({}: {}) {
   }, [router.isReady]);
 
   return (
-    <Layout>
+    <Layout showBottomHomeLink>
       <Head>
-        <title>Search - {siteTitle}</title>
+        <title>{`Search - ${siteTitle}`}</title>
       </Head>
       <section>
-        <div>{searchboxDescription}</div>
         <Searchbox
           initialText={initialSearchText}
+          placeholder={"Search..."}
           onChange={handleSearchTextUpdate}
-        ></Searchbox>
+        />
       </section>
       {!!searchText && (
         <h2 style={{ whiteSpace: "pre-wrap" }}>
