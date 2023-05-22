@@ -38,7 +38,7 @@ export default function Search({}: {}) {
           initialText={initialSearchText}
           onChange={handleSearchTextUpdate}
         ></Searchbox>
-        {!!searchText && <div>You searched for "{searchText}"</div>}
+        {!!searchText && <div>You searched for &quot;{searchText}&quot;</div>}
       </section>
     </Layout>
   );
