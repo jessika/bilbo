@@ -9,7 +9,8 @@ import PostList from "../components/post-list";
 const searchTextKey = "q";
 
 export default function Search({}: {}) {
-  let isLoading = false;
+  // TODO: Add loading icon
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const qValue = router.query[searchTextKey] || "";
   const initialSearchText =
@@ -23,15 +24,17 @@ export default function Search({}: {}) {
     if (!searchText) return;
     if (!searchText.trim()) return;
 
+    setIsLoading(true);
     setSearchText(searchText);
-    isLoading = true;
+    setResults([]);
+
     fetch(`/api/search?q=${searchText}`)
       .then((res) => res.json())
       .then((res) => {
         setResults(res.postMetadatas);
       })
       .finally(() => {
-        isLoading = false;
+        setIsLoading(false);
       });
     // TODO: Detect url query change when going back in browser history
     router.replace(
