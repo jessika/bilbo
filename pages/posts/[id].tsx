@@ -60,7 +60,7 @@ export default function Post({
           Visited{" "}
           <Date dateString={postData.visited_date} formatString={"LLLL yyyy"} />
         </div>
-        <main>
+        <main className={styles.main}>
           <MDXRemote {...postData.mdxSource} components={mdxComponents} />
         </main>
       </article>

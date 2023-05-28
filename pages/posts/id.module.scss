@@ -1,7 +1,19 @@
 @use "styles/typography.scss";
 
 h1.h1 {
+  font-size: 32px;
+  font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+.main h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.main h3 {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .article {
