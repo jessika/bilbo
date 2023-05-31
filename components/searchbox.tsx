@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import Spinner from "react-bootstrap/Spinner";
 import cx from "classnames";
 import styles from "./searchbox.module.scss";
-import { useRef } from "react";
 
 export default function Searchbox({
   initialText = "",
