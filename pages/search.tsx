@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Searchbox from "../components/searchbox";
 import { useEffect, useState } from "react";
 import PostList from "../components/post-list";
+import styles from "./search.module.scss";
 
 /** Url key whose value is the search text. */
 const searchTextKey = "q";
@@ -61,6 +62,7 @@ export default function Search({}: {}) {
           initialText={initialSearchText}
           placeholder={"Search..."}
           onChange={handleSearchTextUpdate}
+          isLoading={isLoading}
         />
       </section>
       {!!searchText && (

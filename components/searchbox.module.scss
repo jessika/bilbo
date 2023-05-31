@@ -1,0 +1,23 @@
+.component {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-right: 40px;
+}
+
+.searchbox {
+  display: flex;
+  flex: 1;
+  margin-right: 0.25rem;
+}
+
+.searchSpinner {
+  position: absolute;
+  right: 0;
+  visibility: hidden;
+}
+
+.searchSpinnerVisible {
+  visibility: visible;
+}
