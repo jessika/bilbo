@@ -9,11 +9,13 @@ export default function Searchbox({
   onChange,
   placeholder = "",
   isLoading = false,
+  autoFocus = false,
 }: {
   initialText?: string;
   onChange: (text: string) => void;
   placeholder?: string;
   isLoading?: boolean;
+  autoFocus?: boolean;
 }) {
   const [searchText, setSearchText] = useState(initialText);
   const onKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
@@ -27,6 +29,7 @@ export default function Searchbox({
   return (
     <div className={styles.component}>
       <Form.Control
+        autoFocus={autoFocus}
         className={styles.searchbox}
         as="input"
         onChange={(e) => setSearchText(e.target.value)}

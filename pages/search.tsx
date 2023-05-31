@@ -4,32 +4,43 @@ import { useRouter } from "next/router";
 import Searchbox from "../components/searchbox";
 import { useEffect, useState } from "react";
 import PostList from "../components/post-list";
-import styles from "./search.module.scss";
+import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 
 /** Url key whose value is the search text. */
 const searchTextKey = "q";
 
-export default function Search({}: {}) {
-  // TODO: Add loading icon
+type ServerSideProps = {
+  qValue: string;
+};
+
+export const getServerSideProps: GetServerSideProps<ServerSideProps> = async (
+  context
+) => {
+  const qQueryValue = context.query[searchTextKey] || "";
+  const qValue =
+    typeof qQueryValue === "string"
+      ? (qQueryValue as string).trim()
+      : (qQueryValue as string[]).join(",").trim();
+  return { props: { qValue } };
+};
+
+export default function Search({
+  qValue,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const qValue = router.query[searchTextKey] || "";
-  const initialSearchText =
-    typeof qValue === "string"
-      ? (qValue as string)
-      : (qValue as string[]).join(",");
-  const [searchText, setSearchText] = useState(initialSearchText);
+  const [searchText, setSearchText] = useState(qValue);
   const [results, setResults] = useState([]);
 
-  const handleSearchTextUpdate = (searchText: string) => {
-    if (!searchText) return;
-    if (!searchText.trim()) return;
+  const onSearchboxTextChange = (searchboxText: string) => {
+    if (!searchboxText) return;
+    searchboxText = searchboxText.trim();
+    if (!searchboxText) return;
 
+    setSearchText(searchboxText);
     setIsLoading(true);
-    setSearchText(searchText);
     setResults([]);
-
-    fetch(`/api/search?q=${searchText}`)
+    fetch(`/api/search?q=${searchboxText}`)
       .then((res) => res.json())
       .then((res) => {
         setResults(res.postMetadatas);
@@ -37,20 +48,21 @@ export default function Search({}: {}) {
       .finally(() => {
         setIsLoading(false);
       });
-    // TODO: Detect url query change when going back in browser history
     router.replace(
       {
         pathname: router.pathname,
-        query: { [searchTextKey]: searchText },
+        query: { [searchTextKey]: searchboxText },
       },
       /* as= */ undefined,
       { shallow: true }
     );
   };
 
-  useEffect(() => {
-    handleSearchTextUpdate(initialSearchText);
-  }, [router.isReady]);
+  useEffect(function initialize() {
+    if (qValue) {
+      onSearchboxTextChange(qValue);
+    }
+  }, []);
 
   return (
     <Layout showBottomHomeLink>
@@ -59,10 +71,11 @@ export default function Search({}: {}) {
       </Head>
       <section>
         <Searchbox
-          initialText={initialSearchText}
+          initialText={searchText}
           placeholder={"Search..."}
-          onChange={handleSearchTextUpdate}
+          onChange={onSearchboxTextChange}
           isLoading={isLoading}
+          autoFocus={true}
         />
       </section>
       {!!searchText && (
