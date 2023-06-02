@@ -28,7 +28,6 @@ export interface PostData {
   mdxSource: MDXRemoteSerializeResult;
   id: string;
   updated_date: string;
-  thumbnail: string;
   title: string;
   visited_date: string;
 }
