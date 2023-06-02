@@ -1,68 +1,71 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 import Searchbox from "../components/searchbox";
 import { useEffect, useState } from "react";
 import PostList from "../components/post-list";
-import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 
 /** Url key whose value is the search text. */
 const searchTextKey = "q";
 
-type ServerSideProps = {
-  qValue: string;
-};
-
-export const getServerSideProps: GetServerSideProps<ServerSideProps> = async (
-  context
-) => {
-  const qQueryValue = context.query[searchTextKey] || "";
+function getUrlSearchText(router: NextRouter) {
+  const qQueryValue = router.query[searchTextKey] || "";
   const qValue =
     typeof qQueryValue === "string"
       ? (qQueryValue as string).trim()
       : (qQueryValue as string[]).join(",").trim();
-  return { props: { qValue } };
-};
+  return qValue;
+}
 
-export default function Search({
-  qValue,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Search() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const [searchText, setSearchText] = useState(qValue);
+  const [searchText, setSearchText] = useState("");
   const [results, setResults] = useState([]);
+  const [isSearchTextInitialized, setIsSearchTextInitialized] = useState(false);
+
+  useEffect(
+    function initialize() {
+      const urlSearchText = getUrlSearchText(router);
+      if (urlSearchText) {
+        setSearchText(urlSearchText);
+      }
+      setIsSearchTextInitialized(true);
+    },
+    [router.isReady]
+  );
+
+  useEffect(
+    function onSearchTextChange() {
+      if (!searchText) return;
+      setIsLoading(true);
+      setResults([]);
+      fetch(`/api/search?q=${searchText}`)
+        .then((res) => res.json())
+        .then((res) => {
+          setResults(res.postMetadatas);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+      router.replace(
+        {
+          pathname: router.pathname,
+          query: { [searchTextKey]: searchText },
+        },
+        /* as= */ undefined,
+        { shallow: true }
+      );
+    },
+    [searchText]
+  );
 
   const onSearchboxTextChange = (searchboxText: string) => {
     if (!searchboxText) return;
     searchboxText = searchboxText.trim();
     if (!searchboxText) return;
-
     setSearchText(searchboxText);
-    setIsLoading(true);
-    setResults([]);
-    fetch(`/api/search?q=${searchboxText}`)
-      .then((res) => res.json())
-      .then((res) => {
-        setResults(res.postMetadatas);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-    router.replace(
-      {
-        pathname: router.pathname,
-        query: { [searchTextKey]: searchboxText },
-      },
-      /* as= */ undefined,
-      { shallow: true }
-    );
   };
-
-  useEffect(function initialize() {
-    if (qValue) {
-      onSearchboxTextChange(qValue);
-    }
-  }, []);
 
   return (
     <Layout showBottomHomeLink>
@@ -70,13 +73,15 @@ export default function Search({
         <title>{`Search - ${siteTitle}`}</title>
       </Head>
       <section>
-        <Searchbox
-          initialText={searchText}
-          placeholder={"Search..."}
-          onChange={onSearchboxTextChange}
-          isLoading={isLoading}
-          autoFocus={true}
-        />
+        {isSearchTextInitialized && (
+          <Searchbox
+            initialText={searchText}
+            placeholder={"Search..."}
+            onChange={onSearchboxTextChange}
+            isLoading={isLoading}
+            autoFocus={true}
+          />
+        )}
       </section>
       {!!searchText && (
         <h2 style={{ whiteSpace: "pre-wrap" }}>

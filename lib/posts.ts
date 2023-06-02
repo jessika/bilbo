@@ -32,6 +32,15 @@ export interface PostData {
   visited_date: string;
 }
 
+export interface PostSearchData {
+  fileContent: string;
+  id: string;
+  updated_date: string;
+  thumbnail: string;
+  title: string;
+  visited_date: string;
+}
+
 export function getSortedPostMetadatas(): PostMetadata[] {
   const allPostsData = getPostFileNames().map((fileName) => {
     const id = getSlugFromFileName(fileName);
@@ -55,18 +64,48 @@ export function getSortedPostMetadatas(): PostMetadata[] {
     };
   });
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.updated_date < b.updated_date) {
-      return 1;
-    }
-    if (a.updated_date > b.updated_date) {
-      return -1;
-    }
-    if (a.visited_date < b.visited_date) {
-      return 1;
-    }
-    return -1;
+  return allPostsData.sort(comparePosts);
+}
+
+export function getPostSearchDatas(): PostSearchData[] {
+  const allPostDatas = getPostFileNames().map((fileName) => {
+    const id = getSlugFromFileName(fileName);
+
+    // Read markdown file as string
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+
+    // Use gray-matter to parse the post metadata section
+    const { content: fileContent, data: frontMatter } = matter(fileContents);
+    const matterResult = matter(fileContents);
+
+    // Combine the data with the id
+    return {
+      id,
+      fileContent,
+      ...(frontMatter as {
+        updated_date: string;
+        title: string;
+        thumbnail: string;
+        visited_date: string;
+      }),
+    };
   });
+  return allPostDatas.sort(comparePosts);
+}
+
+type SortablePost = PostMetadata | PostSearchData;
+function comparePosts(a: SortablePost, b: SortablePost) {
+  if (a.updated_date < b.updated_date) {
+    return 1;
+  }
+  if (a.updated_date > b.updated_date) {
+    return -1;
+  }
+  if (a.visited_date < b.visited_date) {
+    return 1;
+  }
+  return -1;
 }
 
 /** Returns suggested posts based on a current post id. */
