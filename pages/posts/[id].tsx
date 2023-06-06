@@ -15,6 +15,8 @@ import PostListItem, { ItemLayout } from "../../components/post-list-item";
 import styles from "./id.module.scss";
 import Image from "next/image";
 import { DetailedHTMLProps, ImgHTMLAttributes } from "react";
+import { CommentSection } from "../../components/CommentSection";
+import { useRouter } from "next/router";
 
 /** Components used within MDX files. */
 const mdxComponents = {
@@ -49,6 +51,7 @@ export default function Post({
   postData: PostData;
   suggestedPostMetadatas: PostMetadata[];
 }) {
+  let router = useRouter();
   return (
     <Layout showBottomHomeLink>
       <Head>
@@ -64,7 +67,8 @@ export default function Post({
           <MDXRemote {...postData.mdxSource} components={mdxComponents} />
         </main>
       </article>
-      <div className={styles.suggestedPostsContainer}>
+      <div className={styles.divider}></div>
+      <div>
         <h2>Suggested posts</h2>
         <ul className={`${utilStyles.list} ${styles.suggestedPosts}`}>
           {suggestedPostMetadatas.map(
@@ -81,6 +85,10 @@ export default function Post({
             )
           )}
         </ul>
+      </div>
+      <div className={styles.divider}></div>
+      <div className={styles.comments}>
+        <CommentSection location={router.pathname}></CommentSection>
       </div>
     </Layout>
   );
