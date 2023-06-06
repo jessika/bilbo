@@ -37,7 +37,7 @@ const mdxComponents = {
         height={props.height as number}
         width={props.width as number}
         src={props.src as string}
-        loading="lazy"
+        loading={props.loading === "eager" ? "eager" : "lazy"}
         style={style}
       />
     );
