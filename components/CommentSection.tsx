@@ -79,6 +79,13 @@ const recreateRemark42Instance = () => {
 };
 
 type CommentSectionProps = {
+  /**
+   * A unique value to identify this comment section.
+   *
+   * However, the code only uses this value to determine when to recreate the
+   * Remark42 instance; the comment section identifier used by Remark42 will be
+   * read directly from `window`.
+   */
   location: string;
 };
 

@@ -86,6 +86,10 @@ export default function Post({
           )}
         </ul>
       </div>
+      <div className={styles.divider}></div>
+      <div className={styles.comments}>
+        <CommentSection location={postData.id}></CommentSection>
+      </div>
     </Layout>
   );
 }
