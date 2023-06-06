@@ -32,7 +32,7 @@ const insertScript = (id: string, parentElement: HTMLElement) => {
   script.innerHTML = `
     var remark_config = {
       host: "https://comments.jessgoesoutside.com",
-      site_id: "example-name",
+      site_id: "jgo-comments",
       url: "${url}",
       components: ["embed"],
     };
