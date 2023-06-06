@@ -16,6 +16,10 @@ h1.h1 {
   font-weight: 600;
 }
 
+.main {
+  margin-bottom: 4rem;
+}
+
 .article {
   /* Allow long urls to wrap on narrow screens. */
   word-wrap: break-word;
@@ -26,10 +30,13 @@ h1.h1 {
   gap: 1rem;
 }
 
-.suggestedPostsContainer {
+.divider {
   border-top: 1px solid #afafaf;
-  margin-top: 4rem;
-  padding-top: 1rem;
+  margin: 2rem 0;
+}
+
+.comments {
+  margin-top: 3rem;
 }
 
 .date {
