@@ -4,6 +4,7 @@ import { NextRouter, useRouter } from "next/router";
 import Searchbox from "../components/searchbox";
 import { useEffect, useState } from "react";
 import PostList from "../components/post-list";
+import utilStyles from "../styles/utils.module.css";
 
 /** Url key whose value is the search text. */
 const searchTextKey = "q";
@@ -84,9 +85,9 @@ export default function Search() {
         )}
       </section>
       {!!searchText && (
-        <h2 style={{ whiteSpace: "pre-wrap" }}>
+        <h1 className={utilStyles.headingLg} style={{ whiteSpace: "pre-wrap" }}>
           Results for &ldquo;{searchText}&rdquo;
-        </h2>
+        </h1>
       )}
       {!!searchText && !results.length && !isLoading && (
         <span>No results found</span>

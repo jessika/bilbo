@@ -1,9 +1,10 @@
 @use "styles/typography.scss";
 
-$thumbnail-width: 300px;
+$narrow-width: 400px;
 
 .component {
   display: flex;
+  flex-direction: column;
 }
 
 a.content {
@@ -13,36 +14,37 @@ a.content {
 
 .content {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .thumbnailContainer {
   display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.thumbnailContainer > img {
+  border-radius: 0.375rem;
 }
 
 .component_narrow {
-  .content {
-    flex-basis: $thumbnail-width;
-    flex-direction: column;
-    gap: 0;
-  }
+  flex-basis: $narrow-width;
 }
 
 h3.heading {
   font-size: 18px;
   font-weight: 600;
-  margin: 0.5rem 0;
 }
 
 .date {
   @include typography.subheader;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .content {
-    flex-basis: $thumbnail-width;
+    flex-basis: 1;
     flex-direction: column;
-    gap: 0;
   }
 
   .component:not(:last-child) {

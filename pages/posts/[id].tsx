@@ -37,7 +37,7 @@ const mdxComponents = {
         height={props.height as number}
         width={props.width as number}
         src={props.src as string}
-        loading="lazy"
+        loading={props.loading === "eager" ? "eager" : "lazy"}
         style={style}
       />
     );
@@ -69,7 +69,7 @@ export default function Post({
       </article>
       <div className={styles.divider}></div>
       <div>
-        <h2>Suggested posts</h2>
+        <h2 className={styles.suggestedPostsHeader}>Suggested posts</h2>
         <ul className={`${utilStyles.list} ${styles.suggestedPosts}`}>
           {suggestedPostMetadatas.map(
             ({ id, updated_date, thumbnail, title, visited_date }) => (

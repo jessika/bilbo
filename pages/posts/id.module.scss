@@ -1,19 +1,15 @@
 @use "styles/typography.scss";
 
 h1.h1 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  @include typography.headingH1;
 }
 
 .main h2 {
-  font-size: 24px;
-  font-weight: 600;
+  @include typography.headingH2;
 }
 
 .main h3 {
-  font-size: 18px;
-  font-weight: 600;
+  @include typography.headingH3;
 }
 
 .main {
@@ -44,7 +40,11 @@ h1.h1 {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 600px) {
+.suggestedPostsHeader {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
   .suggestedPosts {
     flex-direction: column;
   }

@@ -35,11 +35,11 @@ export default function PostListItem({
       <Link className={styles.content} href={`/posts/${id}`}>
         <div className={styles.thumbnailContainer}>
           <Image
+            fill
             src={thumbnail}
-            height={220}
-            width={330}
-            style={{ height: "auto", width: "300px", objectFit: "contain" }}
+            style={{ objectFit: "fill" }}
             alt=""
+            onLoadingComplete={(img) => (img.style.position = "relative")}
           />
         </div>
         <div>

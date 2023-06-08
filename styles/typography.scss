@@ -3,3 +3,17 @@
   font-size: 14px;
   line-height: 1;
 }
+
+@mixin headingH1 {
+  font-size: 36px;
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+@mixin headingH2 {
+  font-size: 24px;
+}
+
+@mixin headingH3 {
+  font-size: 18px;
+}
