@@ -1,5 +1,5 @@
 import { PostMetadata } from "../lib/posts";
-import PostListItem from "../components/post-list-item";
+import PostListItem from "./PostListItem";
 import styles from "./post-list.module.scss";
 
 export default function PostList({

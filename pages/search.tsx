@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/Layout";
 import { NextRouter, useRouter } from "next/router";
-import Searchbox from "../components/searchbox";
+import SearchBox from "../components/SearchBox";
 import { useEffect, useState } from "react";
-import PostList from "../components/post-list";
+import PostList from "../components/PostList";
 import utilStyles from "../styles/utils.module.css";
 
 /** Url key whose value is the search text. */
@@ -61,11 +61,11 @@ export default function Search() {
     [searchText]
   );
 
-  const onSearchboxTextChange = (searchboxText: string) => {
-    if (!searchboxText) return;
-    searchboxText = searchboxText.trim();
-    if (!searchboxText) return;
-    setSearchText(searchboxText);
+  const onSearchBoxTextChange = (searchBoxText: string) => {
+    if (!searchBoxText) return;
+    searchBoxText = searchBoxText.trim();
+    if (!searchBoxText) return;
+    setSearchText(searchBoxText);
   };
 
   return (
@@ -75,10 +75,10 @@ export default function Search() {
       </Head>
       <section>
         {isSearchTextInitialized && (
-          <Searchbox
+          <SearchBox
             initialText={searchText}
             placeholder={"Search..."}
-            onChange={onSearchboxTextChange}
+            onChange={onSearchBoxTextChange}
             isLoading={isLoading}
             autoFocus={true}
           />

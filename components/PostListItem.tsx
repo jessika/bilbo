@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./post-list-item.module.scss";
-import Date from "./date";
+import Date from "./Date";
 import Image from "next/image";
 import cx from "classnames";
 

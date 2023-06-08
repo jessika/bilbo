@@ -1,4 +1,4 @@
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import {
   getAllPostIds,
   getPostData,
@@ -7,11 +7,11 @@ import {
   PostMetadata,
 } from "../../lib/posts";
 import Head from "next/head";
-import Date from "../../components/date";
+import Date from "../../components/Date";
 import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { MDXRemote } from "next-mdx-remote";
-import PostListItem, { ItemLayout } from "../../components/post-list-item";
+import PostListItem, { ItemLayout } from "../../components/PostListItem";
 import styles from "./id.module.scss";
 import Image from "next/image";
 import { DetailedHTMLProps, ImgHTMLAttributes } from "react";

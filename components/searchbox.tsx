@@ -2,9 +2,9 @@ import { KeyboardEventHandler, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Spinner from "react-bootstrap/Spinner";
 import cx from "classnames";
-import styles from "./searchbox.module.scss";
+import styles from "./search-box.module.scss";
 
-export default function Searchbox({
+export default function SearchBox({
   initialText = "",
   onChange,
   placeholder = "",

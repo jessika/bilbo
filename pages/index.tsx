@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout, { siteTitle } from "../components/Layout";
 import utilStyles from "../styles/utils.module.css";
 import { PostMetadata, getSortedPostMetadatas } from "../lib/posts";
 import { GetStaticProps } from "next";
-import PostList from "../components/post-list";
-import Searchbox from "../components/searchbox";
+import PostList from "../components/PostList";
+import Searchbox from "../components/SearchBox";
 import { useRouter } from "next/router";
 
 export default function Home({
