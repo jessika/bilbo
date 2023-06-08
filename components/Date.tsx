@@ -1,5 +1,6 @@
 import { parseISO, format } from "date-fns";
 
+/** Displays a formatted date. */
 export default function Date({
   dateString,
   formatString = "LLLL d, yyyy",
