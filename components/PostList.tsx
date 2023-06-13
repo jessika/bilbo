@@ -7,6 +7,9 @@ export default function PostList({
 }: {
   postMetadatas: PostMetadata[];
 }) {
+  // By default, load the first set of images eagerly since they are likely to
+  // be above the fold
+  let numEagerLoadImages = 4;
   return (
     <ul className={styles.postList}>
       {postMetadatas.map(
@@ -18,6 +21,7 @@ export default function PostList({
             title={title}
             updatedDate={updated_date}
             visitedDate={visited_date}
+            useLazyLoading={numEagerLoadImages-- <= 0}
           />
         )
       )}

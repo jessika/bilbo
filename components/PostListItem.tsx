@@ -18,6 +18,7 @@ export default function PostListItem({
   thumbnail,
   title,
   visitedDate,
+  useLazyLoading = false,
 }: {
   id: string;
   itemLayout?: ItemLayout;
@@ -25,6 +26,7 @@ export default function PostListItem({
   thumbnail: string;
   title: string;
   visitedDate: string;
+  useLazyLoading?: boolean;
 }) {
   return (
     <li
@@ -34,13 +36,12 @@ export default function PostListItem({
     >
       <Link className={styles.content} href={`/posts/${id}`}>
         <div className={styles.thumbnailContainer}>
-          <Image
-            fill
+          <img
+            className={styles.thumbnail}
             src={thumbnail}
-            style={{ objectFit: "fill" }}
             alt=""
-            onLoadingComplete={(img) => (img.style.position = "relative")}
-          />
+            loading={useLazyLoading ? "lazy" : undefined}
+          ></img>
         </div>
         <div>
           <h3 className={styles.heading}>{title}</h3>

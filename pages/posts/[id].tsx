@@ -77,6 +77,7 @@ export default function Post({
                 key={id}
                 id={id}
                 itemLayout={ItemLayout.Narrow}
+                useLazyLoading={true}
                 thumbnail={thumbnail}
                 title={title}
                 updatedDate={updated_date}
