@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import Link from "next/link";
 import { useEffect } from "react";
+import { ColorScheme, registerColorSchemeListener } from "../lib/color-schemes";
 
 export const siteTitle = "Jess Goes Outside";
 
@@ -19,11 +20,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       }
     };
     window.addEventListener("scroll", onScroll);
-
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
   }, []);
+
+  useEffect(() => {
+    return registerColorSchemeListener((theme: ColorScheme) => {
+      document.body.dataset.bsTheme = theme;
+    });
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
