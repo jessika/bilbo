@@ -1,4 +1,9 @@
 import { Fragment, useEffect } from "react";
+import {
+  ColorScheme,
+  getColorScheme,
+  registerColorSchemeListener,
+} from "../lib/color-schemes";
 
 declare global {
   interface Window {
@@ -28,6 +33,7 @@ const insertScript = (id: string, parentElement: HTMLElement) => {
   if (url.endsWith("/")) {
     url = url.slice(0, -1);
   }
+  const theme = getColorScheme();
   // Now the actual config and script-fetching function:
   script.innerHTML = `
     var remark_config = {
@@ -35,6 +41,7 @@ const insertScript = (id: string, parentElement: HTMLElement) => {
       site_id: "jgo-comments",
       url: "${url}",
       components: ["embed"],
+      theme: "${theme}",
     };
     !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);`;
   parentElement.appendChild(script);
@@ -95,6 +102,12 @@ export function CommentSection({ location }: CommentSectionProps) {
   // Insert the two useEffect hooks. Maybe you can combine them into one? Feel free if you want to.
   useEffect(manageScript, [location]);
   useEffect(recreateRemark42Instance, [location]);
+
+  useEffect(() => {
+    return registerColorSchemeListener((theme: ColorScheme) => {
+      window.REMARK42 && window.REMARK42.changeTheme(theme);
+    });
+  }, []);
 
   return (
     <Fragment>
