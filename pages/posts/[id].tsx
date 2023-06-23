@@ -17,6 +17,7 @@ import Image from "next/image";
 import { DetailedHTMLProps, ImgHTMLAttributes } from "react";
 import { CommentSection } from "../../components/CommentSection";
 import { useRouter } from "next/router";
+import { siteTitle } from "../../components/Layout";
 
 /** Components used within MDX files. */
 const mdxComponents = {
@@ -53,9 +54,9 @@ export default function Post({
 }) {
   let router = useRouter();
   return (
-    <Layout showBottomHomeLink>
+    <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{`${postData.title} | ${siteTitle}`}</title>
       </Head>
       <article className={styles.article}>
         <h1 className={styles.h1}>{postData.title}</h1>

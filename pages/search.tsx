@@ -69,9 +69,9 @@ export default function Search() {
   };
 
   return (
-    <Layout showBottomHomeLink>
+    <Layout>
       <Head>
-        <title>{`Search - ${siteTitle}`}</title>
+        <title>{`Search | ${siteTitle}`}</title>
       </Head>
       <section>
         {isSearchTextInitialized && (
